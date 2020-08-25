@@ -1,12 +1,10 @@
-function nextId(ids){
+ids = [0,50,20,1000]
 
- let i;
-    let b = 1;
-   
-    for (i = 0; i < ids.length; i++) { 
-      if ( ids[i+1] === (ids[i] + 1) ) {       
-        continue;
-      }
-      else if( ids[i] != ids[i+1]) { return (ids[i]+1);   break }
+function nextId(ids){
+    const used = new Set(ids);
+    for (let i = 0; i <= ids.length; i++) {
+      if (!used.has(i)){ console.log(i); return i; }
     }
   }
+    
+nextId(ids)
