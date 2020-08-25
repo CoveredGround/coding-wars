@@ -1,0 +1,12 @@
+function nextId(ids){
+
+ let i;
+    let b = 1;
+   
+    for (i = 0; i < ids.length; i++) { 
+      if ( ids[i+1] === (ids[i] + 1) ) {       
+        continue;
+      }
+      else if( ids[i] != ids[i+1]) { return (ids[i]+1);   break }
+    }
+  }
